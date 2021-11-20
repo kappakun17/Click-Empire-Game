@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
+
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+footer {
+    /* width:100%; */
+    /* height:20%; */
+    color: white;
+    font-family: 'Cairo', sans-serif;
+}
+
+.font-cairo {
+    font-family: 'Cailo',sans-serif;
+}
+
+.full-width{
+    width:100%;
+}
+
+.bg{
+    width:100%;
+    height:90vh;
+}
+
+.bg-1{
+    width: 100%;
+    height: 10%;
+}
+
+.bg-yellow{
+    background-color: #FFD700;
+}
+
+.bg-dark{
+    background-color:#404040;
+    
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.text-white{
+    color: white;
+}
+
+.radius-10{
+    border-radius:10px;
+}
+
+.full-img{
+    width: 100%;
+    height: auto;
+}
+
