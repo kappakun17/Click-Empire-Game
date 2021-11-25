@@ -17,11 +17,26 @@
 
     </head>
 
+    <header>
+        <div class="bg-yellow col-12 d-flex justify-content-end p-2">
+
+            <div class="col-8 d-flex justify-content-end">
+                <div class="col-1 p-2">
+                    <img id="us" src=".\img\usa.png" class="full-img rounded-circle border-10">
+                </div>
+                <div class="col-1 p-2">
+                    <img id="jp" src=".\img\japan.png" class="full-img rounded-circle border-10">
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
     <body>
         <div class="bg bg-yellow d-flex justify-content-center align-items-center flex-column p-2">
 
             <!-- login page -->
-            <div class="container bg-dark radius-10 col-11 col-sm-10 col-md-7 col-lg-6  shadow d-flex justify-content-center align-items-center flex-column p-4">
+            <div id="login-page" class="d-block container bg-dark radius-10 col-11 col-sm-10 col-md-7 col-lg-6  shadow d-flex justify-content-center align-items-center flex-column p-4">
                 
                 <!-- <div class="col-2 col-sm-2 justify-content-center">
                     <img src="img\hamburger.png"
@@ -42,39 +57,97 @@
                 </div>
                 <div class="col-12 d-flex justify-content-around p-3">
                     <button class="btn btn-danger p-2 col-5 rounded-pill fw-bold lang">REGISTER</button>
-                    <button class="btn btn-success p-2 col-5 rounded-pill fw-bold lang">LOG IN</button>
+                    <button id="login-button" class="btn btn-success p-2 col-5 rounded-pill fw-bold lang">LOG IN</button>
                 </div>
 
                 
             </div>
 
             <!-- main Page -->
-            <div>
+            <div id="main-page" class="d-none container bg-dark radius-10 col-11 col-sm-10 shadow d-flex justify-content-center align-items-start flex-wrap p-3">
+                <div class="p-2 col-4">
+                    <div class="bg-gray radius-10 d-flex flex-column p-2">
+                        <div class="p-2">
+                            <div class="col-12 bg-white shadow radius-10 p-1">
+                                <p class="text-center h2 p-1">1102 Burgers</p>
+                                <p class="text-center h4 p-1">one click ￥25</p>
+                            </div>
+
+                        </div>
+                        <div class="p-2">
+                            <div class="col-12 bg-white height-50 shadow radius-10 p-1 d-flex justify-content-center align-items-center flex-column">
+                                <div class="col-5 p-2">
+                                    <img src="./img/hamburger.png" class="full-img">
+                                </div>
+                                <div class="col-12">
+                                    <p class="text-center h5 p-1">Click Humberger!</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="p-2 col-8">
+                    <div class="bg-gray radius-10 d-flex flex-wrap p-2">
+                        <div class="p-2 col-6">
+                            <div class="bg-white p-1 radius-10">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <p class="h5 text-center"><span><i class="fas fa-user"></i> </span></i>Ren Murayama</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 col-6">
+                            <div class="bg-white p-1 radius-10">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <p class="h5 text-center"><span><i class="fas fa-user"></i> </span></i>24 years old</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="p-2 col-6">
+                            <div class="bg-white p-1 radius-10">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <p class="h5 text-center"><span><i class="fas fa-clock"></i> </span></i>100 days</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="p-2 col-6">
+                            <div class="bg-white p-1 radius-10">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <p class="h5 text-center"><span><i class="fas fa-hand-holding-usd"></i> </span></i>$19080</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="p-2 col-12 mt-2">
+                            <div class="bg-white p-1 radius-10 height-50 overflow-auto">
+                                <!-- menu & side page -->
+                                <div class="p-2 col-12 d-flex justify-content-center align-items-center flex-column">
+                                    <div id="menu-container" class="bg-white col-12 blockquote p-1 radius-10 d-flex justify-content-between">
+                                        <!-- img -->
+
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
+            
 
             <!-- side Page -->
             <div>
 
             </div>
 
-            <div class="col-12 d-flex justify-content-center p-4">
-                <div class="col-10 d-flex justify-content-center">
-                    <div class="col-2">
-                        <img id="us" src=".\img\usa.png" class="full-img rounded-circle p-3">
-                    </div>
-                    <div class="col-2">
-                        <img id="jp" src=".\img\japan.png" class="full-img rounded-circle p-3">
-                    </div>
-                    
-                </div>
-    
-            </div>
-
         </div>
     </body>
     <footer>
-        <div class="bg-dark d-flex justify-content-center p-3 mt-2 bg-1">
+        <div class="bg-1 bg-dark d-flex justify-content-center align-items-center p-3 mt-2 bg-1">
             <p class="h6 text-center">@ Ren Murayama - 2021.11</p>
         </div>
     </footer>
@@ -82,5 +155,7 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/password.js"></script>
+    <script src="./js/dry.js"></script>
     <script src="./js/translation/translation.js"></script>
+    
 </html>
