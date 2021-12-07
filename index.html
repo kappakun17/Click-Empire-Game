@@ -18,9 +18,10 @@
     </head>
 
     <header>
-        <div class="bg-yellow col-12 d-flex justify-content-end p-2">
+        <div class="bg-yellow col-12 d-flex justify-content-end">
 
-            <div class="col-8 d-flex justify-content-end">
+
+            <div class="col-6 d-flex justify-content-end">
                 <div class="col-1 p-2">
                     <img id="us" src=".\img\usa.png" class="full-img rounded-circle border-10">
                 </div>
@@ -30,13 +31,15 @@
                 
             </div>
         </div>
+
     </header>
 
     <body>
-        <div class="bg bg-yellow d-flex justify-content-center align-items-center flex-column p-2">
+        
+        <div class="bg bg-yellow d-flex justify-content-center align-items-center flex-column">
 
             <!-- login page -->
-            <div id="login-page" class="d-block container bg-dark radius-10 col-11 col-sm-10 col-md-7 col-lg-6  shadow d-flex justify-content-center align-items-center flex-column p-4">
+            <div id="login-page" class="d-block bg-dark radius-10 col-11 col-sm-10 col-md-7 col-lg-6  shadow d-flex justify-content-center align-items-center flex-column p-4">
                 
                 <!-- <div class="col-2 col-sm-2 justify-content-center">
                     <img src="img\hamburger.png"
@@ -63,21 +66,33 @@
                 
             </div>
 
+            <div id="popup" class="popup d-none">
+                <div id="bg-black-popup" class="bg-black-popup d-flex justify-content-center align-items-center">
+                    <div id="popup-inner" class="p-2 justify-content-center align-items-center">
+                        <!-- items menu Page -->
+                    </div>
+                </div>
+            </div>
+
+
             <!-- main Page -->
-            <div id="main-page" class="d-none container bg-dark radius-10 col-11 col-sm-10 shadow d-flex justify-content-center align-items-start flex-wrap p-3">
+            <div id="main-page" class="d-none main-page container bg-dark radius-10 col-11 col-md-12 shadow d-flex justify-content-center align-items-start flex-wrap p-3">
                 <div class="p-2 col-4">
                     <div class="bg-gray radius-10 d-flex flex-column p-2">
                         <div class="p-2">
                             <div class="col-12 bg-white shadow radius-10 p-1">
-                                <p class="text-center h2 p-1">1102 Burgers</p>
-                                <p class="text-center h4 p-1">one click ￥25</p>
+                                <p class="text-center h2 p-1"><span id="click-humberger-num" class="text-success" defNum="0">0</span> Burgers</p>
+                                <p class="text-center text-primary h6 p-1">
+                                    ￥
+                                    <span id="click-cost-view">25</span>
+                                    /click</p>
                             </div>
 
                         </div>
                         <div class="p-2">
                             <div class="col-12 bg-white height-50 shadow radius-10 p-1 d-flex justify-content-center align-items-center flex-column">
                                 <div class="col-5 p-2">
-                                    <img src="./img/hamburger.png" class="full-img">
+                                    <img id="click-humberger" src="./img/hamburger.png" class="full-img">
                                 </div>
                                 <div class="col-12">
                                     <p class="text-center h5 p-1">Click Humberger!</p>
@@ -92,22 +107,18 @@
                         <div class="p-2 col-6">
                             <div class="bg-white p-1 radius-10">
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <p class="h5 text-center"><span><i class="fas fa-user"></i> </span></i>Ren Murayama</p>
+                                    <p class="h5 text-center"><span><i class="fas fa-user"></i> </span>
+                                        Ren Murayama</p>
                                 </div>
                             </div>
                         </div>
                         <div class="p-2 col-6">
                             <div class="bg-white p-1 radius-10">
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <p class="h5 text-center"><span><i class="fas fa-user"></i> </span></i>24 years old</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="p-2 col-6">
-                            <div class="bg-white p-1 radius-10">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="h5 text-center"><span><i class="fas fa-clock"></i> </span></i>100 days</p>
+                                    <p class="h5 text-center">
+                                        <span><i class="fas fa-user"></i> </span>
+                                        <span id="year-view">24</span>
+                                         years old</p>
                                 </div>
 
                             </div>
@@ -115,7 +126,21 @@
                         <div class="p-2 col-6">
                             <div class="bg-white p-1 radius-10">
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <p class="h5 text-center"><span><i class="fas fa-hand-holding-usd"></i> </span></i>$19080</p>
+                                    <p class="h5 text-center">
+                                        <span><i class="fas fa-clock"></i></span>
+                                        <span id="days-view">360</span>
+                                         days</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="p-2 col-6">
+                            <div class="bg-white p-1 radius-10">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <p class="h5 text-center"><span><i class="fas fa-hand-holding-usd"></i></span>
+                                        $
+                                        <span id="cost-view">20000000</span>
+                                    </p>
                                 </div>
 
                             </div>
@@ -123,11 +148,9 @@
                         <div class="p-2 col-12 mt-2">
                             <div class="bg-white p-1 radius-10 height-50 overflow-auto">
                                 <!-- menu & side page -->
-                                <div class="p-2 col-12 d-flex justify-content-center align-items-center flex-column">
-                                    <div id="menu-container" class="bg-white col-12 blockquote p-1 radius-10 d-flex justify-content-between">
-                                        <!-- img -->
+                                <div id="menu-container" class="p-2 col-12 d-flex justify-content-center align-items-center flex-column">
+                                    <!-- img -->
 
-                                    </div>
                                     
                                 </div>
 
@@ -137,8 +160,7 @@
                 </div>
 
             </div>
-            
-
+           
             <!-- side Page -->
             <div>
 
