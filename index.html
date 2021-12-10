@@ -17,7 +17,7 @@
 
     </head>
 
-    <header>
+    <!-- <header>
         <div class="bg-yellow col-12 d-flex justify-content-end">
 
 
@@ -32,54 +32,57 @@
             </div>
         </div>
 
-    </header>
+    </header> -->
 
     <body>
         
         <div class="bg bg-yellow d-flex justify-content-center align-items-center flex-column">
 
             <!-- login page -->
-            <div id="login-page" class="d-block bg-dark radius-10 col-11 col-sm-10 col-md-7 col-lg-6  shadow d-flex justify-content-center align-items-center flex-column p-4">
+            <div id="initial-page" class="d-block bg-dark radius-10 col-11 col-sm-10 col-md-7 col-lg-6 shadow d-flex justify-content-center align-items-center flex-column p-4">
                 
                 <!-- <div class="col-2 col-sm-2 justify-content-center">
                     <img src="img\hamburger.png"
                     class="full-img shadow">
                 </div> -->
-                <div class="col-12 d-flex justify-content-center p-2">
+                <!-- <div class="col-12 d-flex justify-content-center p-2">
                     <p class="h3 text-center text-white lang">Welcome to Click Empire Game</p>
                 </div>
                 <div class="col-12 col-sm-8 d-flex justify-content-center input-group p-2">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control lang" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                    <input id="input-user-name" type="text" class="form-control lang" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
         
-                </div>
-                <div class="col-12 col-sm-8 d-flex justify-content-center input-group p-2">
+                </div> -->
+                <!-- <div class="col-12 col-sm-8 d-flex justify-content-center input-group p-2">
                     <span class="input-group-text" id="password-eye" eye="1"><i id="icon-eye" class="fas fa-eye-slash"></i></span>
                     <input type="password" id="password" class="form-control lang" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
         
-                </div>
-                <div class="col-12 d-flex justify-content-around p-3">
-                    <button class="btn btn-danger p-2 col-5 rounded-pill fw-bold lang">REGISTER</button>
+                </div> -->
+                <!-- <div class="col-12 col-sm-8 d-flex justify-content-center p-2">
+                    <p class="h6 text-center text-light">※個人情報の入力は必要ございません。</p>
+                </div> -->
+                <!-- <div class="col-12 d-flex justify-content-around p-3">
+                    <button id="register-button" class="btn btn-danger p-2 col-5 rounded-pill fw-bold lang">REGISTER</button>
                     <button id="login-button" class="btn btn-success p-2 col-5 rounded-pill fw-bold lang">LOG IN</button>
-                </div>
+                </div> -->
 
                 
             </div>
 
-            <div id="popup" class="popup d-none">
-                <div id="bg-black-popup" class="bg-black-popup d-flex justify-content-center align-items-center">
-                    <div id="popup-inner" class="p-2 justify-content-center align-items-center">
+            <div id="popup-page" class="popup d-none d-flex justify-content-center align-items-center">
+                <!-- <div id="bg-black-popup" class="bg-black-popup d-flex justify-content-center align-items-center">
+                    <div id="popup-inner" class="p-2 justify-content-center align-items-center"> -->
                         <!-- items menu Page -->
-                    </div>
-                </div>
+                    <!-- </div>
+                </div> -->
             </div>
 
 
             <!-- main Page -->
-            <div id="main-page" class="d-none main-page container bg-dark radius-10 col-11 col-md-12 shadow d-flex justify-content-center align-items-start flex-wrap p-3">
-                <div class="p-2 col-4">
-                    <div class="bg-gray radius-10 d-flex flex-column p-2">
-                        <div class="p-2">
+            <div id="main-page" class="d-none main-page container justify-content-center align-items-center">
+                <!-- <div class="p-2 col-4">
+                    <div class="bg-gray radius-10 d-flex flex-column p-2"> -->
+                        <!-- <div class="p-2">
                             <div class="col-12 bg-white shadow radius-10 p-1">
                                 <p class="text-center h2 p-1"><span id="click-humberger-num" class="text-success" defNum="0">0</span> Burgers</p>
                                 <p class="text-center text-primary h6 p-1">
@@ -98,17 +101,17 @@
                                     <p class="text-center h5 p-1">Click Humberger!</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         
-                    </div>
-                </div>
-                <div class="p-2 col-8">
-                    <div class="bg-gray radius-10 d-flex flex-wrap p-2">
-                        <div class="p-2 col-6">
+                    <!-- </div>
+                </div> -->
+                <!-- <div class="p-2 col-8">
+                    <div class="bg-gray radius-10 d-flex flex-wrap p-2"> -->
+                        <!-- <div class="p-2 col-6">
                             <div class="bg-white p-1 radius-10">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <p class="h5 text-center"><span><i class="fas fa-user"></i> </span>
-                                        Ren Murayama</p>
+                                        <span id="user-name">Ren Murayama</span></p>
                                 </div>
                             </div>
                         </div>
@@ -144,28 +147,32 @@
                                 </div>
 
                             </div>
-                        </div>
-                        <div class="p-2 col-12 mt-2">
+                        </div> -->
+                        <!-- <div class="p-2 col-12 mt-2">
                             <div class="bg-white p-1 radius-10 height-50 overflow-auto">
-                                <!-- menu & side page -->
-                                <div id="menu-container" class="p-2 col-12 d-flex justify-content-center align-items-center flex-column">
+                            
+                                <div id="menu-container" class="p-2 col-12 d-flex justify-content-center align-items-center flex-column"> -->
                                     <!-- img -->
 
                                     
-                                </div>
+                                <!-- </div>
 
                             </div>
-                        </div>
+                        </div> -->
+                    <!-- </div>
+                </div> -->
+                <!-- <div class="col-12 d-flex justify-content-center p-3">
+                    <div class="p-2 col-4">
+                        <button id="reset-button" class="btn btn-danger p-2 col-12 rounded-pill fw-bold lang">RESET</button>
                     </div>
-                </div>
+                    <div class="p-2 col-4">
+                        <button id="save-button" class="btn btn-success p-2 col-12 rounded-pill fw-bold lang">SAVE</button>
+                    </div>
+                </div> -->
 
             </div>
            
-            <!-- side Page -->
-            <div>
-
-            </div>
-
+    
         </div>
     </body>
     <footer>
@@ -177,7 +184,5 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/password.js"></script>
-    <script src="./js/dry.js"></script>
-    <script src="./js/translation/translation.js"></script>
     
 </html>

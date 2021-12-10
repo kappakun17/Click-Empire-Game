@@ -6,7 +6,6 @@ let password = document.getElementById("password")
 
 // passwordEye.addEventListener("click",function(){
 //     let eye = passwordEye.getAttribute("eye");
-//     console.log(eye)
 //     if(eye === 0){
 //         passwordEye.innerHTML = `<i class="fas fa-eye-slash"></i>`
 //         password.type = "password";
