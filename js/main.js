@@ -502,13 +502,13 @@ class Controller{
         new Items("Bullet-Speed Sky Railway", "realState","毎秒 30,000,000,000 円を取得します。", 0, 1, 30000000000, 0, 10000000000000, "./img/bullet-speed sky railway.png"),
         ]
         if(userName === "cheater") return new User(userName,password, 20, 0, Math.pow(10,9),itemList);
-        else return new User(userName,password, 20, 0 , 50000, itemList);
+        else return new User(userName,password, 20, 0 , 5000000, itemList);
     }
 
     static startTimer(user){
         Controller.timer = setInterval(function(){
             user.days++;
-            user.money += user.incomePerSec;
+            user.money += parseInt(user.incomePerSec);
             if(user.days % 360 === 0){
                 user.age++;
                 View.updateUserInfo(user);
@@ -530,7 +530,7 @@ class Controller{
         }else if(user.items[index].currentAmount + count > user.items[index].maxAmount && user.items[index].type != "investment"){
             alert("You can't buy anymore")
         }else{
-            user.money -= Controller.getTotalPrice(user.items[index],count);
+            user.money = user.money - parseInt(Controller.getTotalPrice(user.items[index],count));
             user.items[index].currentAmount += Number(count);
             if(user.items[index].name === "ETF Stock"){
                 user.stock += Controller.getTotalPrice(user.items[index],count);
@@ -560,8 +560,8 @@ class Controller{
                 total += parseInt(item.price * Math.pow(1 + item.perRate, i))
             }
             return total
-        }else if(count > 0 && count % 1 != 0) return total += item.price * count
-        else return total;
+        }else if(count > 0 && count % 1 == 0) return total += parseInt(item.price * count)
+        else return parseInt(total);
     }
     
     static caluculateEtfStockPrice(item, count){
